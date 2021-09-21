@@ -1,13 +1,19 @@
-import Navbar from "../components/Navbar";
+import React from 'react';
+import Navbar from "./components/Navbar";
+import './App.css';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <>
+    <Router>
         <h1>Yusuf HAYIRLI</h1>
         <Navbar/>
-      </header>
-    </div>
+        <Switch>
+          <Route path='/' exact />''
+        </Switch>
+    </Router>
+    </>
   );
 }
 
