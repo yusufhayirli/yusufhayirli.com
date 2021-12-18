@@ -3,15 +3,19 @@ import Navbar from "./components/Navbar";
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
+//<Navbar/>
 function App() {
   return (
     <>
     <Router>
-        <h1>Yusuf HAYIRLI</h1>
-        <Navbar/>
-        <Switch>
-          <Route path='/' exact />''
-        </Switch>
+      <div>
+      <h1>
+        <a href="#" class="neon-button">Yusuf HAYIRLI</a>
+      </h1>
+      </div>
+      <Switch>
+        <Route path='/' exact />''
+      </Switch>
     </Router>
     </>
   );
