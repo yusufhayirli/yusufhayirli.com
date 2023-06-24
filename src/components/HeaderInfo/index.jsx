@@ -12,7 +12,6 @@ const HeaderInfo = ({ info }) => {
   )
 }
 
-
 HeaderInfo.displayName = 'HeaderInfo'
 
 HeaderInfo.propTypes = {
