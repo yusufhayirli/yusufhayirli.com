@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import { useSelector } from 'react-redux';
 import ModeChange from '../../components/ModeChange';
-import HeaderInfo from '../../components/HeaderInfo';
+import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import './style.css';
 // import { findAll } from '../../db';
@@ -21,7 +21,7 @@ function Home() {
     (info &&
       <>
         <ModeChange/>
-        <HeaderInfo info={info}/>
+        <Header info={info}/>
         <Footer info={info}/>
       </>
     )

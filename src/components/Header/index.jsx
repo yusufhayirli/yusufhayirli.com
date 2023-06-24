@@ -18,7 +18,6 @@ const Header = ({ info }) => {
   )
 }
 
-
 Header.displayName = 'Header'
 
 Header.propTypes = {
