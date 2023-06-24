@@ -7,8 +7,6 @@ import infoReducer from './reducers/infoReducer';
 const store = configureStore({
   reducer: {
     info: infoReducer,
-    // about: aboutSlice.reducer,
-    // contact: contactSlice.reducer,
   },
 });
 

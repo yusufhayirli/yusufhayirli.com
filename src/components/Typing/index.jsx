@@ -13,7 +13,7 @@ const Typing = ({ text, words }) => {
         setTimeout(loopTyping, 200);
       } else {
         deletingEffect();
-      };
+      }
     };
     loopTyping();
   };
@@ -28,7 +28,7 @@ const Typing = ({ text, words }) => {
       } else {
         i = (i + 1) % words.length;
         typingEffect();
-      };
+      }
     };
     loopDeleting();
   };
