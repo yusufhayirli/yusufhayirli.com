@@ -1,22 +1,38 @@
 import React from 'react';
-import Navbar from "./components/Navbar";
+import { Provider } from 'react-redux';
+import store from './store';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Home from './pages/Home/index';
 
-//<Navbar/>
 function App() {
+  //HOLD THIS as example --------------------------------------------
+  // const [contentReady, setContentReady] = useState(false);
+  // const [info, setInfo] = useState({});
+
+  // useEffect(() => {
+  //   fetch('./yh.json').then(
+  //     function(u){ return u.json();}
+  //   ).then(
+  //     function(json){
+  //       setInfo(json);
+  //     }
+  //   )
+  //   setTimeout(() => {
+  //     setContentReady(true);
+  //   }, 100);
+  // },[]);
+  // ----------------------------------------------------------------
+
   return (
     <>
-    <Router>
-      <div>
-      <h1>
-        <a href="#" class="neon-button">Yusuf HAYIRLI</a>
-      </h1>
-      </div>
-      <Switch>
-        <Route path='/' exact />''
-      </Switch>
-    </Router>
+      <Provider store={store}>
+        <Router>
+          <Switch>
+            <Route exact path="/" component={Home}/>
+          </Switch>
+        </Router>
+      </Provider>
     </>
   );
 }

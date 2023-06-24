@@ -1,0 +1,19 @@
+:root {
+  --body-background: rgba(183, 183, 183, 0.522);
+  --body-color: rgb(38, 38, 38);
+  --link-color: rgb(12, 93, 179);
+}
+
+[data-theme='dark'] {
+  --body-background: #282c34;
+  --body-color: rgb(199, 199, 199);
+  --link-color: rgb(1, 169, 169);
+}
+
+/* html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+} */

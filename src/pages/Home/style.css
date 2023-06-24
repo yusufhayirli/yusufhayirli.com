@@ -1,0 +1,17 @@
+.header-container {
+  text-align: center;
+}
+
+.header-container a {
+  text-decoration: none;
+}
+
+#like-to-text {
+  /* direction: rtl; */
+}
+
+.typing-div {
+  /* display: block; */
+  /* display: flex; */
+  /* margin: 0 25vh; */
+}
