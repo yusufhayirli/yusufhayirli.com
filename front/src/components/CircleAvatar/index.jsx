@@ -1,6 +1,6 @@
 import React from "react";
 import RoundedImage from "react-rounded-image";
-import Photo from '../../static/yh.jpg'
+import Photo from '../../static/yhnew.jpg'
 import './style.css';
 
 // this sample uses react-rounded-image

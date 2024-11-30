@@ -20,9 +20,5 @@
         "react"
     ],
     "rules": {
-    },
-    "eslint.workingDirectories": [
-        "front/",
-        "back/"
-    ]
+    }
 }

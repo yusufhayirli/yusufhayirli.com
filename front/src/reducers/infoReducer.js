@@ -17,10 +17,10 @@ const initialState = {
       workLocation: "İzmir, Turkey",
       country: "Turkey",
       image: "https://yusufhayirli.github.io/images/itisMe.jpg",
-      currentCompanyName: "OSF Digital",
-      currentCompanyUrl: "https://osf.digital/",
+      currentCompanyName: "",
+      currentCompanyUrl: "",
       title: "Computer Engineer",
-      jobTitle: "Full-Stack Developer",
+      jobTitle: "Software Engineer",
       universityName: "Izmir Institude of Technology (IZTECH)",
       universityUrl: "https://iyte.edu.tr/",
       socialUrls: {

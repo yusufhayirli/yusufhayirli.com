@@ -17,7 +17,7 @@ const ContentBody = () => {
 
   useEffect(() => {
     fetchRecords();
-  }, []);
+  }, [records]);
 
   return (
     <div className='content-body'>
