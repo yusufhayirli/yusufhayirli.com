@@ -8,8 +8,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - run: cd front && npm ci
-      - run: cd front && npm run build
+      # - run: cd front && npm ci
+      # - run: cd front && npm run build
 
       - name: Checkout repository
         uses: actions/checkout@v3
