@@ -48,6 +48,12 @@
       "react-app/jest"
     ]
   },
+  "browerslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all",
+    "not op_mob >= 1"
+  ],
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.60.0",
     "@typescript-eslint/parser": "^5.60.0",
