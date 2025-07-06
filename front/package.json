@@ -32,10 +32,15 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
+    "preinstall": "npx npm-force-resolutions",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
+  },
+  "resolutions": {
+    "@babel/helper-compilation-targets": "^7.21.5",
+    "@babel/helper-define-polyfill-provider": "^0.4.3"
   },
   "eslintConfig": {
     "extends": [
