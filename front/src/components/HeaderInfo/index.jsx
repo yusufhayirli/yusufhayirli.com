@@ -1,13 +1,13 @@
 import React from "react";
 import PropTypes from 'prop-types';
 import './style.css';
+import EducationSection from "../EducationSection";
 
 const HeaderInfo = ({ info }) => {
   return (
     <>
-      <h1>I&apos;m {info.content.name} </h1>
-      <h2>{info.content.title}, graduated from <a alt="" href={info.content.universityUrl}>{info.content.universityName}</a> in {info.content.country}.</h2>
-      <h2>{info.content.jobTitle} <a alt="" href={info.content.currentCompanyUrl}>@{info.content.currentCompanyName}</a>.</h2>
+      <h1>Hi, I’m {info.content.name} – {info.content.whatIdo} </h1>
+      <EducationSection educationInfo={info.content.education}/>
     </>
   )
 }

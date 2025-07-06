@@ -1,34 +1,34 @@
 @import 'https://fonts.googleapis.com/css?family=Roboto';
 
-h2, a, p {
-	/* font-family: Roboto; */
-	/* text-decoration: none; */
-}
-p>a {
-	color: #fd084a;
+/* Link styling inside <p> */
+p > a {
+  color: #fd084a;
   text-decoration: none;
 }
-.blink {
-  animation: blink 0.5s infinite;
-}
-@keyframes blink{
-  to { opacity: .0; }
-}
-/* .flex {
-	display: flex;
-  justify-content: center;
-} */
-.header-sub-title {
-  /* font-family: "Courier"; */
-  font-size: 20px;
-  padding: 0.1em;
+
+/* Typing effect blink cursor */
+.cursor {
+  display: inline-block;
+  animation: blink 0.8s infinite;
+  color: inherit;
 }
 
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Typing wrapper */
 .header-sub-title {
-  display: block;
+  font-size: 20px;
+  padding: 0.1em;
   height: 2rem;
+  display: block;
+  text-align: center;
+  font-family: 'Roboto', 'Courier', monospace;
 }
 
 .header-sub-title p:first-child {
   margin-right: 10px;
+  display: inline-block;
 }

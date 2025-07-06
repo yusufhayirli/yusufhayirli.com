@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Socials from '../Socials';
 import Divider from '../Divider';
+import SiteSignature from '../SiteSignature';
 import './style.css';
 
 const Footer = ({ info }) => {
@@ -13,7 +14,10 @@ const Footer = ({ info }) => {
       <Socials 
         socialUrls={info.content.socialUrls}
       />
-      <h2><i>Designed by</i> {info.content.name}</h2>
+      
+      <SiteSignature
+        name={info.content.name}
+      />
     </div>
   );
 }

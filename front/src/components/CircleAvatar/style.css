@@ -1,4 +1,21 @@
-.rounded-image {
+.custom-rounded-image {
   display: flex;
   justify-content: center;
+  align-items: center;
+  width: fit-content;
+  margin: auto;
+}
+
+.custom-avatar {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--body-color); /* or any fixed color like #333 */
+  transition: all 0.3s ease-in-out;
+}
+
+.custom-avatar:hover {
+  border-color: var(--link-color); /* optional hover effect */
+  box-shadow: 0 0 10px var(--link-color);
 }

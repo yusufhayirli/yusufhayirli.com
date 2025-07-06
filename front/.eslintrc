@@ -21,8 +21,12 @@
     ],
     "rules": {
     },
-    "eslint.workingDirectories": [
-        "front/",
-        "back/"
-    ]
+    "settings":
+    {
+        "eslint.workingDirectories": [
+            "back",
+            "front"
+        ]
+    }
+
 }

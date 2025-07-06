@@ -1,0 +1,180 @@
+:root {
+  --card-bg: #ffffff;
+  --body-color: #222222;
+}
+
+/* ---------------------------------
+   Experience Card Styles
+---------------------------------- */
+.experience-card {
+  position: relative;
+  background: var(--card-bg);
+  border: 1px solid transparent;
+  border-radius: 1rem;
+  padding: 1.25rem 1.5rem;
+  box-shadow: var(--card-shadow-default);
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+.experience-card:hover {
+  transform: translateY(-0.375rem) scale(1.015);
+  box-shadow: var(--card-shadow-hover);
+  border-color: var(--card-border-hover);
+}
+
+.experience-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 0.0625rem;
+  background: linear-gradient(
+    135deg,
+    var(--highlight-glow-1),
+    var(--highlight-glow-2),
+    var(--highlight-glow-3)
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.experience-card:hover::before {
+  opacity: 1;
+}
+
+.experience-card h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--body-color);
+}
+
+.experience-card h2 a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  opacity: 0.7;
+}
+
+.date-range {
+  font-size: 0.85rem;
+  color: var(--body-color);
+  opacity: 0.6;
+  margin-bottom: 0.5rem;
+}
+
+.experience-card p {
+  font-size: 0.95rem;
+  color: var(--body-color);
+  opacity: 0.85;
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
+}
+
+/* ---------------------------------
+   Summary
+---------------------------------- */
+.summary-short {
+  opacity: 0.9;
+  max-height: 4rem;
+  overflow: hidden;
+  padding: 0 1.25rem;
+  margin: 0.75rem 0;
+  text-align: left;
+}
+
+.experience-card.expanded .summary-short {
+  display: none;
+}
+
+.summary-full {
+  animation: fadeInUp 0.3s ease;
+  padding: 0 1.25rem;
+  margin: 0.75rem 0;
+  text-align: left;
+}
+
+.summary-short li,
+.summary-full li {
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+  list-style-type: disc;
+  list-style-position: outside;
+}
+
+/* ---------------------------------
+   Toggle Button
+---------------------------------- */
+.toggle-btn {
+  background: none;
+  border: none;
+  color: var(--link-color);
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.85rem;
+  margin: 0.5rem 0;
+  transition: opacity 0.3s ease;
+}
+
+/* ---------------------------------
+   Tags
+---------------------------------- */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.tag {
+  background: linear-gradient(to bottom, var(--tag-bg-start), var(--tag-bg-end));
+  border-radius: 0.5rem;
+  padding: 0.3125rem 0.625rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--body-color);
+  box-shadow: var(--tag-shadow);
+  transition: all 0.2s ease-in-out;
+}
+
+.tag:hover {
+  transform: scale(1.05);
+  background-color: var(--link-color);
+  color: white;
+}
+
+/* ---------------------------------
+   Animations
+---------------------------------- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(1.25rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------------------------------
+   Responsive
+---------------------------------- */
+@media (max-width: 600px) {
+  .experience-card {
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+}

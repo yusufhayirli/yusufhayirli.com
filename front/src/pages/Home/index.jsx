@@ -13,10 +13,10 @@ function Home() {
     (info &&
       <>
       <div className='home-container'>
+        <ModeChange/>
         <div className='home-inside'>
-          <ModeChange/>
           <Header id="header" info={info}/>
-          <ContentBody id="content-body"/>
+          <ContentBody id="content-body" info={info}/>
         </div>
           <Footer id="footer" info={info}/>
       </div>

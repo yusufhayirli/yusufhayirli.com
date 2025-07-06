@@ -17,7 +17,16 @@ body {
 }
 
 .container {
-  margin: 1rem 5rem;
+  max-width: 72rem; /* 1152px ideal size */
+  margin: 0 auto; 
+  padding: 0 1.5rem; /* Allows breathing room on all devices, not just mobile */
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem; /* Slightly tighter padding on smaller viewports */
+  }
 }
 
 a {
