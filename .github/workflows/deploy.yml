@@ -16,6 +16,14 @@ jobs:
         with:
           node-version: 18
 
+      - name: Install npm-force-resolutions
+        working-directory: front
+        run: npm install npm-force-resolutions --save-dev
+
+      - name: Apply forced resolutions
+        working-directory: front
+        run: npx npm-force-resolutions
+
       - name: Install dependencies
         working-directory: front
         run: npm install --legacy-peer-deps
@@ -32,5 +40,5 @@ jobs:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: /public_html/yusufhayirli.com/
+          server-dir: /public_html/
           local-dir: front/build
