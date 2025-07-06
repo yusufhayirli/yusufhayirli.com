@@ -5,3 +5,11 @@
 a {
   text-decoration: none;
 }
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.75rem;   /* ~28px */
+    font-weight: 600;
+    line-height: 1.3;
+  }
+}

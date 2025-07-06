@@ -1,0 +1,36 @@
+.scroll-up-button {
+  position: fixed;
+  top: 1.25rem; /* same as toggle top margin */
+  right: 1.25rem; /* symmetric with toggle on the right */
+  z-index: 999;
+  width: 36px;
+  height: 36px;
+  background-color: var(--link-color);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.scroll-up-button.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.scroll-up-button:hover {
+  background-color: var(--link-color-hover);
+  transform: scale(1.05);
+}
+
+.scroll-up-button:focus,
+.scroll-up-button:focus-visible,
+.scroll-up-button:active {
+  outline: none !important;
+  box-shadow: none !important;
+  background-color: var(--link-color) !important;
+}

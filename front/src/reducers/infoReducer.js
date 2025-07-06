@@ -8,7 +8,7 @@ const initialState = {
       context: "https://schema.org",
       type: "Person",
       name: "Yusuf HAYIRLI",
-      whatIdo: "A man of focus, commitment, and sheer will.",
+      whatIdo: "A man of focus, commitment and sheer will.",
       additionalName: "PensarNada",
       url: "https://yusufhayirli.github.io",
       gender: "http://schema.org/Male",

@@ -4,6 +4,7 @@ import ModeChange from '../../components/ModeChange';
 import Header from '../../components/Header';
 import ContentBody from '../../components/ContentBody';
 import Footer from '../../components/Footer';
+import ScrollToTopButton from '../../components/ScrollToTopButton';
 import './style.css';
 
 function Home() {
@@ -13,6 +14,7 @@ function Home() {
     (info &&
       <>
       <div className='home-container'>
+        <ScrollToTopButton onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}/>
         <ModeChange/>
         <div className='home-inside'>
           <Header id="header" info={info}/>
