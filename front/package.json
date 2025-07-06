@@ -33,7 +33,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "BROWSERSLIST='>0.2%, not dead, not op_mini all' react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
