@@ -1,23 +1,22 @@
 name: Deploy to GoDaddy FTP
 
 on:
-  workflow_dispatch: # GitHub Actions üzerinden elle başlatmak için
+  workflow_dispatch:
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # - run: cd front && npm ci
-      # - run: cd front && npm run build
-
       - name: Checkout repository
         uses: actions/checkout@v3
 
       - name: Install dependencies
+        working-directory: front
         run: npm install --legacy-peer-deps
 
       - name: Build React app
+        working-directory: front
         run: npm run build
 
       - name: Upload to GoDaddy FTP
