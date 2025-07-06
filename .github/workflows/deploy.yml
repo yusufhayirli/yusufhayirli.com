@@ -24,7 +24,7 @@ jobs:
         working-directory: front
         run: |
           export NODE_OPTIONS=--openssl-legacy-provider
-          npm run build
+          npm run build --verbose
 
       - name: Upload to GoDaddy FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
