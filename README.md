@@ -1,46 +1,50 @@
-# Legacy MERN Stack Website
+# yusufhayirli.com
 
-This repository contains one of my earliest full-stack web projects, developed using the **MERN** stack: **MongoDB**, **Express.js**, **React**, and **Node.js**.  
-It represents the starting point of my journey as a full-stack developer, where I first explored how frontend and backend systems work together in a production-ready environment.
+Yusuf Hayırlı’nın tek sayfalık, iki dilli yazılım mühendisliği portfolyosu.
 
-## 📅 Project History
+## Mimari
 
-- **Initialized:** September 2021  
-- **Stack:** MERN (MongoDB, Express.js, React, Node.js)  
-- **Status:** Archived / Legacy  
-- **Purpose:** Personal website and playground to apply full-stack concepts
+- Next.js App Router ve TypeScript
+- Tailwind CSS v4; yalnız karmaşık kart geometrileri ve animasyonlarda SCSS Modules
+- Statik export: uygulama çalışma zamanında sunucu gerektirmez
+- Ayrı UI componentleri, domain modelleri ve repository/preference arayüzleri
+- Varsayılan İngilizce; kalıcı EN/TR ve açık/koyu tema tercihleri
+- Nginx ile production Docker image
+- Cloudflare Pages CDN cache ve doğrudan deploy
+- GitHub Actions üzerinde lint, unit test, build ve container doğrulaması
 
-## 💡 Motivation
+Redis veya ayrı backend bilinçli olarak eklenmedi. İçerik statik olduğu için Cloudflare ve Nginx cache katmanları yeterlidir. Dinamik iletişim formu, admin paneli veya API eklendiğinde backend ve veri cache’i ayrı bir servis olarak konumlandırılabilir.
 
-This was my first experience building a complete full-stack application from scratch.  
-I worked on:
-- Setting up custom backend API endpoints using Express.js
-- Building dynamic frontend components with React (CRA)
-- Managing server-side rendering and database logic via MongoDB
-- Deploying the site manually without modern CI/CD pipelines
+## Yerel geliştirme
 
-Although it’s no longer actively maintained and relies on older technologies, it still reflects the core of my long-term passion for React and web development.
+~~~bash
+cd front
+npm ci
+npm run dev
+~~~
 
-## 🚀 Evolution
+Uygulama varsayılan olarak http://localhost:3000 adresinde açılır.
 
-Since this project, I’ve significantly improved my tech stack and practices.  
-Today, I build modern, scalable applications using:
-- **Next.js** and **TypeScript** for frontend
-- **PostgreSQL** with **Prisma ORM**
-- **Redux Toolkit Query** for advanced state and data handling
-- **CI/CD pipelines** via **GitHub Actions**
-- Deployed to platforms like **Railway** for seamless backend hosting
+## Kalite kontrolü
 
-👉 You can see my latest project here: [yusufhayirli.com-next](https://github.com/yusufhayirli/yusufhayirli.com-next)
+~~~bash
+cd front
+npm run check
+~~~
 
-## 🧠 Key Learnings
+## Docker
 
-- Full-stack architecture design
-- RESTful API principles
-- Component-based frontend development
-- Handling state and async operations in React
-- Deployment process without automation tools
+~~~bash
+docker compose up --build
+~~~
 
----
+Production image http://localhost:8080 adresinden servis edilir.
 
-Thanks for checking out one of the roots of my React journey!
+## Cloudflare Pages
+
+GitHub repository’sinde aşağıdaki Actions secrets tanımlanmalıdır:
+
+- CLOUDFLARE_API_TOKEN
+- CLOUDFLARE_ACCOUNT_ID
+
+Workflow, master dalındaki başarılı CI çalışmasından sonra front/out klasörünü mevcut yusufhayirli Pages projesine yükler.

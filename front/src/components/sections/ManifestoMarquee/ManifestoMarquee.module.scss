@@ -1,0 +1,15 @@
+.track {
+  animation: marquee 22s linear infinite;
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 580px) {
+  .track {
+    animation-duration: 17s;
+  }
+}
