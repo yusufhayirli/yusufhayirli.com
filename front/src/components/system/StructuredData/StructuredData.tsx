@@ -19,7 +19,7 @@ const structuredData = {
       "@type": "ProfilePage",
       "@id": `${siteUrl}/#profile`,
       url: siteUrl,
-      name: "Yusuf Hayırlı — Full-Stack Software Engineer",
+      name: "Yusuf Hayırlı - Full-Stack Software Engineer",
       description:
         "Professional portfolio covering full-stack engineering, global commerce, product analytics and independent delivery.",
       inLanguage: ["en", "tr"],

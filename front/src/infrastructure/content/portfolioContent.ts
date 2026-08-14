@@ -62,7 +62,7 @@ const sharedSkillGroups = [
 
 export const portfolioContent = {
   en: {
-    pageTitle: "Yusuf Hayirli — Full-Stack Software Engineer",
+    pageTitle: "Yusuf Hayirli - Full-Stack Software Engineer",
     navigation: [
       { href: "#work", label: "Work" },
       { href: "#commerce", label: "Commerce" },
@@ -119,7 +119,7 @@ export const portfolioContent = {
     experience: {
       title: ["Experience that", "compounds."],
       description:
-        "Product engineering, global commerce and independent delivery—each role added new systems, responsibilities and operating contexts.",
+        "Product engineering, global commerce and independent delivery-each role added new systems, responsibilities and operating contexts.",
       items: [
         {
           eyebrow: "01 · LEARN THE PRODUCT",
@@ -133,7 +133,7 @@ export const portfolioContent = {
           company: "OSF Digital",
           description:
             "Global commerce, analytics, accessibility, performance and certified Salesforce cartridge work.",
-          period: "2022—2024 ↗",
+          period: "2022-2024 ↗",
           featured: true
         },
         {
@@ -141,15 +141,15 @@ export const portfolioContent = {
           company: "Independent",
           description:
             "Requirements, architecture, full-stack implementation, Docker and remote delivery.",
-          period: "2024—NOW ↗"
+          period: "2024-NOW ↗"
         }
       ]
     },
     commerce: {
-      eyebrow: "SELECTED DEPTH — OSF DIGITAL",
+      eyebrow: "SELECTED DEPTH - OSF DIGITAL",
       title: ["GLOBAL", "COMMERCE."],
       description:
-        "Storefront delivery, measurement systems and certified platform work—shown as three connected outcomes rather than a list of responsibilities.",
+        "Storefront delivery, measurement systems and certified platform work-shown as three connected outcomes rather than a list of responsibilities.",
       impacts: [
         {
           eyebrow: "01 / BUILD",
@@ -222,7 +222,7 @@ export const portfolioContent = {
     }
   },
   tr: {
-    pageTitle: "Yusuf Hayırlı — Full-Stack Yazılım Mühendisi",
+    pageTitle: "Yusuf Hayırlı - Full-Stack Yazılım Mühendisi",
     navigation: [
       { href: "#work", label: "Deneyim" },
       { href: "#commerce", label: "E-ticaret" },
@@ -289,7 +289,7 @@ export const portfolioContent = {
           company: "OSF Digital",
           description:
             "Global e-ticaret, analitik, erişilebilirlik, performans ve sertifikalı Salesforce cartridge çalışmaları.",
-          period: "2022—2024 ↗",
+          period: "2022-2024 ↗",
           featured: true
         },
         {
@@ -297,12 +297,12 @@ export const portfolioContent = {
           company: "Bağımsız",
           description:
             "Gereksinim analizi, mimari, full-stack geliştirme, Docker ve uzaktan teslimat.",
-          period: "2024—GÜNÜMÜZ ↗"
+          period: "2024-GÜNÜMÜZ ↗"
         }
       ]
     },
     commerce: {
-      eyebrow: "UZMANLIK ALANI — OSF DIGITAL",
+      eyebrow: "UZMANLIK ALANI - OSF DIGITAL",
       title: ["GLOBAL", "E-TİCARET."],
       description:
         "Storefront geliştirme, ölçüm sistemleri ve sertifikalı platform çalışmaları; sorumluluk listesi yerine birbirine bağlı üç sonuç olarak sunuluyor.",

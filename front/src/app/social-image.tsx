@@ -6,7 +6,7 @@ export const socialImageSize = {
 };
 
 export const socialImageAlt =
-  "Yusuf Hayırlı — Full-Stack Software Engineer portfolio";
+  "Yusuf Hayırlı - Full-Stack Software Engineer portfolio";
 
 export function createSocialImage() {
   return new ImageResponse(
