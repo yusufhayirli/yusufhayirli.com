@@ -5,7 +5,7 @@ import { PreferenceBootstrap } from "@/components/system/PreferenceBootstrap/Pre
 import "./globals.css";
 
 const siteUrl = "https://yusufhayirli.com";
-const siteTitle = "Yusuf Hayırlı — Full-Stack Software Engineer";
+const siteTitle = "Yusuf Hayırlı - Full-Stack Software Engineer";
 const siteDescription =
   "Full-stack software engineer building commerce products, web platforms and durable delivery systems with React, Next.js, .NET and Salesforce Commerce Cloud.";
 
