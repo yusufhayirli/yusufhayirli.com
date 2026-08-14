@@ -18,8 +18,10 @@ jobs:
     if: >-
       github.event_name == 'workflow_dispatch' ||
       (github.event.workflow_run.conclusion == 'success' &&
-      github.event.workflow_run.head_branch == 'main')
+      github.event.workflow_run.head_branch == 'master')
+
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout verified revision
         uses: actions/checkout@v4
@@ -47,3 +49,4 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy front/out --project-name=yusufhayirli --branch=main
+          
