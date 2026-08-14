@@ -36,7 +36,7 @@ export function Header({
       <a
         className="flex items-center gap-[11px] text-[15px] font-black leading-none tracking-[0.055em] text-ink no-underline before:block before:size-[10px] before:shrink-0 before:rotate-[-4deg] before:bg-teal before:shadow-[3px_3px_0_var(--coral)] before:content-[''] max-[580px]:gap-2 max-[580px]:text-xs max-[580px]:tracking-[0.035em] max-[580px]:before:size-2"
         href="#top"
-        aria-label="Yusuf Hayirli — home"
+        aria-label="Yusuf Hayirli - home"
       >
         YUSUF HAYIRLI
       </a>
