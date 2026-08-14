@@ -5,6 +5,8 @@ interface ContactFooterProps {
 }
 
 export function ContactFooter({ contact }: ContactFooterProps) {
+  const emailAddress = "yusufhayirli@gmail.com";
+
   return (
     <footer
       className="group relative flex min-h-[65vh] items-start justify-center border-t border-line bg-paper px-5 pt-[88px] pb-[72px] text-center text-ink max-[580px]:min-h-[58vh] max-[580px]:px-[14px] max-[580px]:pt-[70px] max-[580px]:pb-[58px]"
@@ -25,11 +27,14 @@ export function ContactFooter({ contact }: ContactFooterProps) {
         <p className="m-0 text-muted">{contact.description}</p>
         <a
           className="mt-[22px] border-b-2 border-coral pb-[7px] text-teal no-underline transition-transform duration-[250ms] ease-[ease] hover:translate-y-[-4px]"
-          href="mailto:yusufhayirli@gmail.com"
+          href={`mailto:${emailAddress}?subject=${encodeURIComponent("Start a conversation")}`}
           aria-label={contact.linkAriaLabel}
         >
           {contact.linkLabel}
         </a>
+        <div className="mt-10 text-[10px] font-medium uppercase tracking-[0.18em] text-muted max-[580px]:mt-[24px]">
+          Copyright © 2026 Yusuf HAYIRLI
+        </div>
       </div>
     </footer>
   );

@@ -27,7 +27,7 @@ function MarqueeGroup({ items }: ManifestoMarqueeProps) {
 export function ManifestoMarquee({ items }: ManifestoMarqueeProps) {
   return (
     <section
-      className="overflow-hidden border-y border-transparent bg-paper py-[42px] text-ink dark:border-line dark:bg-ink dark:text-paper max-[580px]:py-[27px]"
+      className="overflow-hidden border-y border-line bg-paper py-[42px] text-ink max-[580px]:py-[27px]"
       aria-label={items.join(", ")}
     >
       <div className={[styles.track, "flex w-max"].join(" ")} aria-hidden="true">
