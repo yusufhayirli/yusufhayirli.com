@@ -3,9 +3,39 @@ name: Deploy to Cloudflare Pages
 on:
   workflow_dispatch:
 
+permissions:
+  contents: read
+
+concurrency:
+  group: cloudflare-pages-production
+  cancel-in-progress: true
+
 jobs:
-  disabled:
-    if: false
+  deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - run: echo "Deployment is disabled. Build is handled by CI after merge."
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: front/package-lock.json
+
+      - name: Install dependencies
+        working-directory: front
+        run: npm install
+
+      - name: Build static site
+        working-directory: front
+        run: npm run build
+
+      - name: Publish to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy front/out --project-name=yusufhayirli --branch=main
