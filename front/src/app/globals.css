@@ -1,0 +1,115 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *));
+@custom-variant tr (&:where(html[lang='tr'], html[lang='tr'] *));
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-teal: var(--teal);
+  --color-coral: var(--coral);
+  --color-sky: var(--sky);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-muted: var(--muted);
+  --color-on-color: var(--on-color);
+  --font-sans: Inter, Aptos, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+
+:root {
+  --paper: #f3eadb;
+  --ink: #142320;
+  --teal: #0a857f;
+  --coral: #f06449;
+  --sky: #9cd4d2;
+  --line: #b9b5a9;
+  --line-strong: #8f9189;
+  --muted: #59625f;
+  --on-color: #ffffff;
+  --shadow: rgba(20, 35, 32, 0.14);
+  color-scheme: light;
+}
+
+html[data-theme='dark'] {
+  --paper: #111917;
+  --ink: #f3eadb;
+  --teal: #66c6c1;
+  --coral: #ff7558;
+  --sky: #276663;
+  --line: #394743;
+  --line-strong: #66736f;
+  --muted: #a6b1ad;
+  --on-color: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.3);
+  color-scheme: dark;
+}
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background: var(--paper);
+  }
+
+  body {
+    min-width: 320px;
+    margin: 0;
+    overflow-x: hidden;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    font-kerning: normal;
+    text-rendering: optimizeLegibility;
+    transition:
+      background-color 220ms ease,
+      color 220ms ease;
+  }
+
+  button,
+  a {
+    font: inherit;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  button {
+    color: inherit;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--coral);
+    outline-offset: 4px;
+  }
+
+  ::selection {
+    background: var(--coral);
+    color: #ffffff;
+  }
+
+  #work,
+  #commerce,
+  #projects,
+  #contact {
+    scroll-margin-top: 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
