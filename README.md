@@ -1,10 +1,8 @@
-<div align="center">
-
 # yusufhayirli.com
 
-**Full-stack yazılım mühendisliği portfolyosu** - tek sayfa, iki dil, sıfır sunucu.
+Full-stack software engineering portfolio - a single page, bilingual (EN/TR), served with no application server at request time.
 
-[![Live Site](https://img.shields.io/badge/live-yusufhayirli.com-111827?style=for-the-badge&logo=googlechrome&logoColor=white)](https://yusufhayirli.com)
+Live site: [yusufhayirli.com](https://yusufhayirli.com)
 
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
 ![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
@@ -17,61 +15,55 @@
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
 ![Cloudflare Pages](https://img.shields.io/badge/Cloudflare_Pages-F38020?style=flat-square&logo=cloudflarepages&logoColor=white)
 
-</div>
+![yusufhayirli.com preview](https://yusufhayirli.com/opengraph-image)
 
-<p align="center">
-  <img src="https://yusufhayirli.com/opengraph-image" alt="yusufhayirli.com önizlemesi" width="100%" />
-</p>
+## Overview
 
----
-
-## Genel bakış
-
-Yusuf Hayırlı'nın tek sayfalık, iki dilli (EN/TR) yazılım mühendisliği portfolyosu. Next.js ile statik olarak export edilir, sunucu tarafı çalışma zamanı gerektirmez ve Nginx üzerinden konteynerlenmiş şekilde ya da doğrudan Cloudflare Pages CDN üzerinden servis edilir.
+Yusuf Hayırlı's single-page, bilingual (EN/TR) software engineering portfolio. Statically exported with Next.js, it requires no server runtime at request time and is served either as a containerized image behind Nginx or directly through the Cloudflare Pages CDN.
 
 > Full-stack software engineer for commerce products, web platforms and the systems that keep them moving.
 
-## Öne çıkanlar
+## Highlights
 
-- 🌐 **İki dilli** - varsayılan İngilizce, kalıcı EN/TR tercihi
-- 🌓 **Açık/koyu tema** - kullanıcı tercihi tarayıcıda kalıcı olarak saklanır
-- ⚡ **Statik export** - çalışma zamanında sunucu yok, tamamen CDN'den servis edilir
-- 🧱 **Katmanlı mimari** - domain, infrastructure, providers ve composition ayrımıyla test edilebilir yapı
-- 🎬 **Zengin bölümler** - Hero, Experience, Commerce, Projects, Toolkit ve Contact bölümleri
-- 🧪 **Uçtan uca kalite kontrolü** - lint, unit test, build ve container doğrulaması tek komutla ve CI'da
-- 🖼️ **Dinamik sosyal görseller** - OpenGraph/Twitter kartları çalışma zamanında üretilir
+- **Bilingual** - defaults to English, with a persisted EN/TR preference
+- **Light/dark theme** - the user's choice is persisted in the browser
+- **Static export** - no server at runtime, served entirely from the CDN
+- **Layered architecture** - testable structure with domain, infrastructure, providers and composition boundaries
+- **Sections** - Hero, Experience, Commerce, Projects, Toolkit and Contact
+- **Quality gate** - lint, unit tests, build and container verification in one command and in CI
+- **Dynamic social images** - OpenGraph/Twitter cards generated at build time
 
 ## Tech stack
 
-| Katman | Teknolojiler |
+| Layer | Technologies |
 | --- | --- |
 | Framework | Next.js (App Router), React, TypeScript |
-| Stil | Tailwind CSS v4 · karmaşık kart geometrisi/animasyonlar için SCSS Modules |
-| Test | Vitest |
-| Kod kalitesi | ESLint (`eslint-config-next`) |
-| Dağıtım | Docker (multi-stage build) + Nginx · Cloudflare Pages (CDN + direkt deploy) |
-| CI/CD | GitHub Actions - lint, unit test, build ve container doğrulaması |
+| Styling | Tailwind CSS v4 · SCSS Modules for complex card geometry/animations |
+| Testing | Vitest |
+| Code quality | ESLint (`eslint-config-next`) |
+| Delivery | Docker (multi-stage build) + Nginx · Cloudflare Pages (CDN + direct deploy) |
+| CI/CD | GitHub Actions - lint, unit test, build and container verification |
 
-## Mimari
+## Architecture
 
 ```
 front/src
-├── app/              Next.js App Router - sayfa, layout, sitemap, robots, sosyal görseller
+├── app/              Next.js App Router - page, layout, sitemap, robots, social images
 ├── components/
 │   ├── sections/      Hero, Experience, Commerce, Projects, Toolkit, Manifesto Marquee
 │   ├── layout/         Header, ContactFooter
 │   ├── controls/        LanguageToggle, ThemeSwitch
 │   ├── system/           PreferenceBootstrap, StructuredData
-│   └── ui/                 Container, SectionHeading gibi paylaşılan bileşenler
-├── domain/           Portfolyo içeriği ve tercihler için framework'ten bağımsız tipler
-├── infrastructure/    İçerik deposu (StaticPortfolioContentRepository) ve tarayıcı tercih deposu
-├── providers/        React context ile bağımlılık enjeksiyonu (PortfolioProvider)
-└── composition/       Domain arayüzlerini somut implementasyonlara bağlayan composition root
+│   └── ui/                 Shared building blocks like Container, SectionHeading
+├── domain/           Framework-agnostic types for portfolio content and preferences
+├── infrastructure/    Content repository (StaticPortfolioContentRepository) and browser preference store
+├── providers/        Dependency injection via React context (PortfolioProvider)
+└── composition/       Composition root wiring domain interfaces to concrete implementations
 ```
 
-Redis veya ayrı bir backend bilinçli olarak eklenmedi: içerik statik olduğu için Cloudflare ve Nginx cache katmanları yeterli. Dinamik bir iletişim formu, admin paneli veya API eklenirse backend ve veri cache'i ayrı bir servis olarak konumlandırılabilir.
+Redis or a separate backend was deliberately left out: since the content is static, the Cloudflare and Nginx cache layers are enough. If a dynamic contact form, admin panel or API is added later, the backend and its data cache can be introduced as a separate service.
 
-## Yerel geliştirme
+## Local development
 
 ```bash
 cd front
@@ -79,9 +71,9 @@ npm ci
 npm run dev
 ```
 
-Uygulama varsayılan olarak [http://localhost:3000](http://localhost:3000) adresinde açılır.
+The app runs at [http://localhost:3000](http://localhost:3000) by default.
 
-## Kalite kontrolü
+## Quality gate
 
 ```bash
 cd front
@@ -94,21 +86,13 @@ npm run check   # lint + test + build
 docker compose up --build
 ```
 
-Production image [http://localhost:8080](http://localhost:8080) adresinden servis edilir (multi-stage build → statik export → Nginx).
+The production image is served at [http://localhost:8080](http://localhost:8080) (multi-stage build → static export → Nginx).
 
 ## Cloudflare Pages
 
-GitHub repository'sinde aşağıdaki Actions secrets tanımlanmalıdır:
+The following Actions secrets must be configured on the GitHub repository:
 
 - `CLOUDFLARE_API_TOKEN`
 - `CLOUDFLARE_ACCOUNT_ID`
 
-Deploy workflow'u `front/out` klasörünü mevcut `yusufhayirli` Pages projesine yükler; `master` dalındaki başarılı CI çalışmasının ardından tetiklenir.
-
----
-
-<div align="center">
-
-[yusufhayirli.com](https://yusufhayirli.com) tarafından geliştirildi.
-
-</div>
+The deploy workflow uploads the `front/out` folder to the existing `yusufhayirli` Pages project; it runs after a successful CI run on `master`.
