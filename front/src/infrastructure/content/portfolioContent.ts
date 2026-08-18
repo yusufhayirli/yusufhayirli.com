@@ -65,6 +65,7 @@ const sharedSkillGroups = [
       "Integration Testing",
       "Playwright",
       "ESLint",
+      "Claude Code",
       "Accessibility / WCAG",
       "Core Web Vitals",
       "SOLID"
@@ -203,7 +204,21 @@ export const portfolioContent = {
             "Zero to production: a multi-AI-provider learning platform, built solo across web, mobile and backend - live, with real users.",
           detail:
             "An AI-powered daily learning platform I designed, built and shipped solo end to end, across web, mobile and backend.",
-          tags: ["React", "React Native", "NestJS", "Supabase", "Gemini / Groq AI"],
+          tags: [
+            "React",
+            "React Native",
+            "Expo",
+            "Metro",
+            "TypeScript",
+            "NestJS",
+            "Fastify",
+            "Supabase",
+            "Drizzle ORM",
+            "LLM",
+            "Docker",
+            "Cloudflare",
+            "Render"
+          ],
           link: "https://lorearn.com",
           linkLabel: "See it live +",
           accent: "coral",
@@ -364,7 +379,21 @@ export const portfolioContent = {
             "Sıfırdan production'a: çoklu AI sağlayıcılı, web+mobile+backend tam entegre bir öğrenme platformu - canlıda, gerçek kullanıcılarla.",
           detail:
             "Tek başıma uçtan uca tasarlayıp geliştirdiğim ve canlıya aldığım, AI destekli günlük öğrenme platformu.",
-          tags: ["React", "React Native", "NestJS", "Supabase", "Gemini / Groq AI"],
+          tags: [
+            "React",
+            "React Native",
+            "Expo",
+            "Metro",
+            "TypeScript",
+            "NestJS",
+            "Fastify",
+            "Supabase",
+            "Drizzle ORM",
+            "LLM",
+            "Docker",
+            "Cloudflare",
+            "Render"
+          ],
           link: "https://lorearn.com",
           linkLabel: "Canlıyı gör +",
           accent: "coral",
