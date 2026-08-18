@@ -351,7 +351,7 @@ export const portfolioContent = {
       ]
     },
     projects: {
-      title: ["Öne çıkan", "çalışmalar."],
+      title: ["Projeler."],
       description:
         "Gerçek profesyonel deneyimlerden seçilen çalışmalar, detaylı vaka çalışmalarına dönüştürülüyor.",
       inspectLabel: "Kapsamı incele +",
@@ -400,7 +400,7 @@ export const portfolioContent = {
       title: ["BİRLİKTE", "ÜRETELİM."],
       description:
         "İyi mühendislik, faydalı bir problem ve açık bir konuşmayla başlar.",
-      linkLabel: "Bir konuşma başlat ↗",
+      linkLabel: "İletişime geç ↗",
       linkAriaLabel: "Yusuf Hayırlı’ya e-posta gönder"
     }
   }
