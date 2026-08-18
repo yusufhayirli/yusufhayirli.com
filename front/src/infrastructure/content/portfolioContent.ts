@@ -7,8 +7,10 @@ const sharedSkillGroups = [
     items: [
       "React",
       "Next.js",
+      "Vite",
       "TypeScript",
       "JavaScript",
+      "Tailwind CSS",
       "React Native",
       "Expo"
     ]
@@ -18,6 +20,8 @@ const sharedSkillGroups = [
     items: [
       "Node.js",
       "Express.js",
+      "NestJS",
+      "Fastify",
       ".NET",
       "C#",
       "Java",
@@ -28,8 +32,12 @@ const sharedSkillGroups = [
       "PostgreSQL",
       "EF Core",
       "Prisma",
+      "Drizzle ORM",
       "MongoDB",
-      "Firebase"
+      "Firebase",
+      "Supabase",
+      "Gemini API",
+      "Groq"
     ]
   },
   {
@@ -48,11 +56,15 @@ const sharedSkillGroups = [
     items: [
       "Docker",
       "Docker Compose",
+      "pnpm",
+      "Turborepo",
       "GitHub Actions",
       "CI/CD",
       "Postman",
       "Unit Testing",
       "Integration Testing",
+      "Playwright",
+      "ESLint",
       "Accessibility / WCAG",
       "Core Web Vitals",
       "SOLID"
@@ -138,7 +150,7 @@ export const portfolioContent = {
         },
         {
           eyebrow: "03 · DELIVER END TO END",
-          company: "Independent",
+          company: "Freelance",
           description:
             "Requirements, architecture, full-stack implementation, Docker and remote delivery.",
           period: "2024-NOW ↗"
@@ -185,28 +197,33 @@ export const portfolioContent = {
       closeLabel: "Close scope −",
       items: [
         {
-          status: "CASE STUDY 01 · IN PREPARATION",
+          status: "CASE STUDY 01 · LIVE",
+          title: "Lorearn",
+          summary:
+            "Zero to production: a multi-AI-provider learning platform, built solo across web, mobile and backend - live, with real users.",
+          detail:
+            "An AI-powered daily learning platform I designed, built and shipped solo end to end, across web, mobile and backend.",
+          tags: ["React", "React Native", "NestJS", "Supabase", "Gemini / Groq AI"],
+          link: "https://lorearn.com",
+          linkLabel: "See it live +",
+          accent: "coral",
+          brand: "lorearn"
+        },
+        {
+          status: "CASE STUDY 02 · IN PREPARATION",
           title: "Customer Behavior Tracker",
           summary: "Commerce analytics and experimentation foundations.",
           detail:
             "GTM DataLayer architecture, event taxonomy, GA4 QA, A/B testing workflows and TypeScript/React refactoring.",
-          tags: ["GTM", "GA4", "TypeScript", "Testing"]
+          tags: ["GTM", "GA4", "TypeScript", "Testing", "PostgreSQL", "Docker"]
         },
         {
-          status: "CASE STUDY 02 · DRAFTING",
+          status: "CASE STUDY 03 · DRAFTING",
           title: "Headless Commerce R&D",
           summary: "Modern storefront prototypes and migration paths.",
           detail:
             "React and Node.js prototypes with Contentful, then migration paths toward Next.js and GraphQL.",
-          tags: ["React", "Next.js", "GraphQL"]
-        },
-        {
-          status: "CASE STUDY 03 · COLLECTING",
-          title: "Independent Builds",
-          summary: "Full-stack patterns from current client delivery.",
-          detail:
-            "Next.js interfaces, .NET and Node.js services, PostgreSQL persistence with EF Core, and Dockerized delivery.",
-          tags: [".NET", "C#", "EF Core", "PostgreSQL", "Docker"]
+          tags: ["React", "Next.js", "GraphQL", ".NET", "C#", "EF Core"]
         }
       ]
     },
@@ -235,10 +252,10 @@ export const portfolioContent = {
     hero: {
       title: ["DETAYA HÂKİM OL.", "SİSTEMİ TASARLA.", "DEĞER ÜRET."],
       description:
-        "E-ticaret ürünleri, web platformları ve onları ayakta tutan sistemler geliştiren full-stack yazılım mühendisi.",
+        "E-ticaret ürünleri, web platformları ve bunları destekleyen sistemler geliştiren full-stack yazılım mühendisi.",
       linkLabel: "Çalışmaları keşfet ↓",
       location: "5+ yıl · Adana, Türkiye",
-      fanClosedLabel: "ÜZERİNE GEL / DOKUNARAK AÇ",
+      fanClosedLabel: "ÜZERİNE GEL VEYA DOKUN",
       fanOpenLabel: "DARALTMAK İÇİN DOKUN",
       stacks: [
         {
@@ -273,30 +290,30 @@ export const portfolioContent = {
       "E-TİCARET DENEYİMİ"
     ],
     experience: {
-      title: ["Derinleşen", "deneyim."],
+      title: ["Deneyimden", "uzmanlığa."],
       description:
-        "Ürün mühendisliği, global e-ticaret ve bağımsız teslimat; her rol yeni sistemler, sorumluluklar ve çalışma bağlamları ekledi.",
+        "Ürün geliştirmeden global e-ticarete, bağımsız projelerden uçtan uca teslimata uzanan deneyim.",
       items: [
         {
-          eyebrow: "01 · ÜRÜNÜ ÖĞREN",
+          eyebrow: "01 · ÜRÜN GELİŞTİRME",
           company: "Jotform",
           description:
-            "Ürüne dönük özellikler için React entegrasyonları, REST API’leri ve MVC servisleri geliştirdim.",
+            "Ürün odaklı özellikler için React entegrasyonları, REST API’leri ve MVC servisleri geliştirdim.",
           period: "2021 ↗"
         },
         {
-          eyebrow: "02 · ÖLÇEKLİ GELİŞTİR",
+          eyebrow: "02 · GLOBAL ÖLÇEKTE GELİŞTİR",
           company: "OSF Digital",
           description:
-            "Global e-ticaret, analitik, erişilebilirlik, performans ve sertifikalı Salesforce cartridge çalışmaları.",
+            "Global e-ticaret projelerinde geliştirme, analitik, erişilebilirlik, performans ve sertifikalı Salesforce cartridge çalışmaları.",
           period: "2022-2024 ↗",
           featured: true
         },
         {
           eyebrow: "03 · UÇTAN UCA TESLİM",
-          company: "Bağımsız",
+          company: "Freelance",
           description:
-            "Gereksinim analizi, mimari, full-stack geliştirme, Docker ve uzaktan teslimat.",
+            "Gereksinim analizinden mimari tasarıma, full-stack geliştirmeden teslimata kadar tüm proje sorumluluğu.",
           period: "2024-GÜNÜMÜZ ↗"
         }
       ]
@@ -305,17 +322,17 @@ export const portfolioContent = {
       eyebrow: "UZMANLIK ALANI - OSF DIGITAL",
       title: ["GLOBAL", "E-TİCARET."],
       description:
-        "Storefront geliştirme, ölçüm sistemleri ve sertifikalı platform çalışmaları; sorumluluk listesi yerine birbirine bağlı üç sonuç olarak sunuluyor.",
+        "Storefront geliştirme, kullanıcı davranışı analitiği ve Salesforce Commerce Cloud çalışmalarını üç temel uzmanlık alanında bir araya getiriyorum.",
       impacts: [
         {
-          eyebrow: "01 / GELİŞTİR",
-          title: "Müşteriye dönük e-ticaret",
+          eyebrow: "01 / GELİŞTİRME",
+          title: "Müşteri odaklı e-ticaret",
           description:
             "React, TypeScript, Node.js, REST API’leri ve Salesforce Commerce Cloud."
         },
         {
-          eyebrow: "02 / ÖLÇÜMLE",
-          title: "Davranış analitiği",
+          eyebrow: "02 / ANALİZ",
+          title: "Kullanıcı davranışı analitiği",
           description:
             "DataLayer mimarisi, event taxonomy, GTM Preview, GA4 DebugView ve A/B test süreçleri."
         },
@@ -323,7 +340,7 @@ export const portfolioContent = {
           eyebrow: "03 / MODERNİZE ET",
           title: "Headless e-ticaret Ar-Ge",
           description:
-            "Contentful ile React ve Node.js prototipleri; ardından Next.js ve GraphQL için dokümante edilmiş geçiş yolları."
+            "Contentful, React ve Node.js ile geliştirilen prototipler, Next.js ve GraphQL’e geçiş için teknik yaklaşım ve dokümantasyon."
         }
       ],
       clients: [
@@ -334,35 +351,40 @@ export const portfolioContent = {
       ]
     },
     projects: {
-      title: ["İncelemeye", "değer işler."],
+      title: ["Öne çıkan", "çalışmalar."],
       description:
-        "Doğrulanmış profesyonel çalışmalar, herkese açık vaka çalışmalarına dönüştürülüyor. Kurgusal yan proje yok.",
+        "Gerçek profesyonel deneyimlerden seçilen çalışmalar, detaylı vaka çalışmalarına dönüştürülüyor.",
       inspectLabel: "Kapsamı incele +",
       closeLabel: "Kapsamı kapat −",
       items: [
         {
-          status: "VAKA ÇALIŞMASI 01 · HAZIRLANIYOR",
+          status: "VAKA ÇALIŞMASI 01 · YAYINDA",
+          title: "Lorearn",
+          summary:
+            "Sıfırdan production'a: çoklu AI sağlayıcılı, web+mobile+backend tam entegre bir öğrenme platformu - canlıda, gerçek kullanıcılarla.",
+          detail:
+            "Tek başıma uçtan uca tasarlayıp geliştirdiğim ve canlıya aldığım, AI destekli günlük öğrenme platformu.",
+          tags: ["React", "React Native", "NestJS", "Supabase", "Gemini / Groq AI"],
+          link: "https://lorearn.com",
+          linkLabel: "Canlıyı gör +",
+          accent: "coral",
+          brand: "lorearn"
+        },
+        {
+          status: "VAKA ÇALIŞMASI 02 · HAZIRLANIYOR",
           title: "Customer Behavior Tracker",
-          summary: "E-ticaret analitiği ve deney süreçlerinin temelleri.",
+          summary: "E-ticaret analitiği, kullanıcı davranışı ve deney optimizasyonu.",
           detail:
             "GTM DataLayer mimarisi, event taxonomy, GA4 kalite kontrolü, A/B test süreçleri ve TypeScript/React refactor çalışması.",
-          tags: ["GTM", "GA4", "TypeScript", "Testing"]
+          tags: ["GTM", "GA4", "TypeScript", "Testing", "PostgreSQL", "Docker"]
         },
         {
-          status: "VAKA ÇALIŞMASI 02 · TASLAK",
+          status: "VAKA ÇALIŞMASI 03 · TASLAK",
           title: "Headless E-ticaret Ar-Ge",
-          summary: "Modern storefront prototipleri ve geçiş yolları.",
+          summary: "Modern storefront mimarileri, prototipler ve headless geçiş süreçleri.",
           detail:
             "Contentful ile React ve Node.js prototipleri; ardından Next.js ve GraphQL yönünde belgelenmiş geçiş yolları.",
-          tags: ["React", "Next.js", "GraphQL"]
-        },
-        {
-          status: "VAKA ÇALIŞMASI 03 · DERLENİYOR",
-          title: "Bağımsız Projeler",
-          summary: "Güncel müşteri çalışmalarından full-stack geliştirme kalıpları.",
-          detail:
-            "Next.js arayüzleri, .NET ve Node.js servisleri, EF Core ile PostgreSQL veri katmanı ve Docker tabanlı teslimat.",
-          tags: [".NET", "C#", "EF Core", "PostgreSQL", "Docker"]
+          tags: ["React", "Next.js", "GraphQL", ".NET", "C#", "EF Core"]
         }
       ]
     },
