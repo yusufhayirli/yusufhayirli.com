@@ -53,6 +53,10 @@ export interface ProjectItem {
   readonly summary: string;
   readonly detail: string;
   readonly tags: readonly string[];
+  readonly link?: string;
+  readonly linkLabel?: string;
+  readonly accent?: "sky" | "coral" | "teal";
+  readonly brand?: "lorearn";
 }
 
 export interface ProjectsContent extends SectionIntro {
