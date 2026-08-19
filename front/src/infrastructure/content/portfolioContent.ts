@@ -226,19 +226,34 @@ export const portfolioContent = {
         },
         {
           status: "CASE STUDY 02 · IN PREPARATION",
+          title: "Workforce Execution Platform",
+          summary:
+            "Daily plan to approved progress - offline-first field capture, three-stage approval chain.",
+          detail:
+            "WBS-driven work catalog, role-scoped daily plans, crew and field execution tracking, and a Head of Master → Site Chief → Project Manager approval workflow-backed by a PWA offline outbox for unreliable site connectivity.",
+          tags: [
+            "React",
+            "TypeScript",
+            "NestJS",
+            "Prisma",
+            "PostgreSQL",
+            "Redis",
+            "JWT",
+            "API-first",
+            "PWA",
+            "Docker"
+          ],
+          accent: "teal",
+          brand: "workforce"
+        },
+        {
+          status: "CASE STUDY 03 · IN PREPARATION",
           title: "Customer Behavior Tracker",
           summary: "Commerce analytics and experimentation foundations.",
           detail:
             "GTM DataLayer architecture, event taxonomy, GA4 QA, A/B testing workflows and TypeScript/React refactoring.",
-          tags: ["GTM", "GA4", "TypeScript", "Testing", "PostgreSQL", "Docker"]
-        },
-        {
-          status: "CASE STUDY 03 · DRAFTING",
-          title: "Headless Commerce R&D",
-          summary: "Modern storefront prototypes and migration paths.",
-          detail:
-            "React and Node.js prototypes with Contentful, then migration paths toward Next.js and GraphQL.",
-          tags: ["React", "Next.js", "GraphQL", ".NET", "C#", "EF Core"]
+          tags: ["GTM", "GA4", "TypeScript", "Testing", "PostgreSQL", "Docker"],
+          backgroundImage: "/assets/case-studies/cbt/datalayer.png"
         }
       ]
     },
@@ -401,19 +416,34 @@ export const portfolioContent = {
         },
         {
           status: "VAKA ÇALIŞMASI 02 · HAZIRLANIYOR",
+          title: "Workforce Execution Platform",
+          summary:
+            "Günlük plandan onaylı ilerlemeye - offline saha girişi, üç aşamalı onay zinciri.",
+          detail:
+            "WBS tabanlı iş kataloğu, role göre kapsamlandırılmış günlük planlar, ekip ve saha ilerleme takibi; Head of Master → Site Chief → Project Manager onay zinciri ve saha bağlantı kopmalarına karşı PWA offline outbox.",
+          tags: [
+            "React",
+            "TypeScript",
+            "NestJS",
+            "Prisma",
+            "PostgreSQL",
+            "Redis",
+            "JWT",
+            "API-first",
+            "PWA",
+            "Docker"
+          ],
+          accent: "teal",
+          brand: "workforce"
+        },
+        {
+          status: "VAKA ÇALIŞMASI 03 · HAZIRLANIYOR",
           title: "Customer Behavior Tracker",
           summary: "E-ticaret analitiği, kullanıcı davranışı ve deney optimizasyonu.",
           detail:
             "GTM DataLayer mimarisi, event taxonomy, GA4 kalite kontrolü, A/B test süreçleri ve TypeScript/React refactor çalışması.",
-          tags: ["GTM", "GA4", "TypeScript", "Testing", "PostgreSQL", "Docker"]
-        },
-        {
-          status: "VAKA ÇALIŞMASI 03 · TASLAK",
-          title: "Headless E-ticaret Ar-Ge",
-          summary: "Modern storefront mimarileri, prototipler ve headless geçiş süreçleri.",
-          detail:
-            "Contentful ile React ve Node.js prototipleri; ardından Next.js ve GraphQL yönünde belgelenmiş geçiş yolları.",
-          tags: ["React", "Next.js", "GraphQL", ".NET", "C#", "EF Core"]
+          tags: ["GTM", "GA4", "TypeScript", "Testing", "PostgreSQL", "Docker"],
+          backgroundImage: "/assets/case-studies/cbt/datalayer.png"
         }
       ]
     },

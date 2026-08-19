@@ -119,6 +119,7 @@
 .detail[data-open="true"] {
   grid-template-rows: 1fr;
   margin-top: 12px;
+  margin-bottom: 16px;
   opacity: 1;
 }
 
@@ -145,6 +146,43 @@
   color: var(--ink);
   text-decoration: none;
   cursor: pointer;
+}
+
+.bgImage {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top left;
+  filter: blur(4px) saturate(1.15);
+  pointer-events: none;
+}
+
+.bgScrim {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: var(--paper);
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.card:has(.bgImage)::after {
+  content: none;
+}
+
+.card:has(.bgImage) .body h3,
+.card:has(.bgImage) .body > p,
+.card:has(.bgImage) .detail {
+  text-shadow:
+    0 1px 16px var(--paper),
+    0 1px 3px var(--paper);
+}
+
+.card:has(.bgImage) .detail {
+  color: var(--ink);
 }
 
 .brand-lorearn {
@@ -293,6 +331,105 @@
     ),
     var(--lorearn-bg);
 }
+
+.brand-workforce {
+  --workforce-green: #d8f56a;
+  --workforce-cream: #f2ede4;
+  background:
+    radial-gradient(circle at 75% 12%, rgba(216, 245, 106, 0.24), transparent 25%),
+    linear-gradient(145deg, #153e30 0%, #0a241c 100%);
+  border-color: rgba(216, 245, 106, 0.22);
+  color: var(--workforce-cream);
+}
+
+.brand-workforce::after {
+  content: "";
+  width: 340px;
+  height: 340px;
+  top: auto;
+  right: -140px;
+  bottom: -160px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: none;
+  opacity: 1;
+  box-shadow:
+    0 0 0 40px rgba(255, 255, 255, 0.018),
+    0 0 0 80px rgba(255, 255, 255, 0.012);
+}
+
+.brand-workforce > small {
+  color: var(--workforce-green);
+}
+
+.brand-workforce .body > p,
+.brand-workforce .detail {
+  color: var(--workforce-cream);
+  text-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.85),
+    0 1px 14px rgba(0, 0, 0, 0.55);
+}
+
+.brand-workforce .tags span {
+  border-color: rgba(216, 245, 106, 0.32);
+  color: var(--workforce-cream);
+}
+
+.brand-workforce a,
+.brand-workforce button {
+  color: var(--workforce-cream);
+  border-bottom-color: var(--workforce-green);
+}
+
+.brand-workforce:hover {
+  background:
+    radial-gradient(circle at 75% 12%, rgba(216, 245, 106, 0.32), transparent 25%),
+    linear-gradient(145deg, #153e30 0%, #0a241c 100%);
+}
+
+.shots {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.shot {
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid rgba(242, 237, 228, 0.14);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+  opacity: 0.8;
+}
+
+.shot img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(3px);
+}
+
+.shotLogin {
+  width: 36%;
+  height: 36%;
+  top: 4%;
+  right: -2%;
+}
+
+.shotDemo {
+  width: 38%;
+  height: 14%;
+  top: 46%;
+  right: -3%;
+}
+
+.shotLogin img {
+  object-position: top;
+}
+
 
 @media (max-width: 900px) {
   .grid {

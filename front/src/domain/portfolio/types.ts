@@ -56,7 +56,8 @@ export interface ProjectItem {
   readonly link?: string;
   readonly linkLabel?: string;
   readonly accent?: "sky" | "coral" | "teal";
-  readonly brand?: "lorearn";
+  readonly brand?: "lorearn" | "workforce";
+  readonly backgroundImage?: string;
 }
 
 export interface ProjectsContent extends SectionIntro {

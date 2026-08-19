@@ -57,6 +57,29 @@ export function ProjectCard({
             <em />
           </span>
         </div>
+      ) : item.brand === "workforce" ? (
+        <div className={styles.shots} aria-hidden="true">
+          <span className={`${styles.shot} ${styles.shotLogin}`}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/assets/case-studies/workforce/login-form.png" alt="" />
+          </span>
+          <span className={`${styles.shot} ${styles.shotDemo}`}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/assets/case-studies/workforce/demo-users.png" alt="" />
+          </span>
+        </div>
+      ) : null}
+      {item.backgroundImage ? (
+        <>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            className={styles.bgImage}
+            src={item.backgroundImage}
+            alt=""
+            aria-hidden="true"
+          />
+          <div className={styles.bgScrim} aria-hidden="true" />
+        </>
       ) : null}
       <small>{item.status}</small>
       <div className={styles.body}>
